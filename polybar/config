@@ -30,7 +30,7 @@ border-left-size = 0
 
 wm-restack = i3
 
-font-0 = "Microsoft YaHei:style=regular:size=12.5;3"
+font-0 = "Source Code Pro:style=regular:size=13;3"
 
 fixed-center = true
 spacing = 0

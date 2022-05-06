@@ -24,7 +24,7 @@ A **dark** theme about i3wm, include dunst, picom, polybar and rofi.
 
 ## Install Command
 ```bash
-sudo pacman -S i3 qt5ct networkmanager xfce4-poer-manager dunst picom polybar rofi alacritty feh redshift pipewire blueman gnome-keyring gnome-clocks gnome-screenshot
+sudo pacman -S i3 qt5ct networkmanager xfce4-power-manager dunst picom polybar rofi alacritty feh redshift pipewire blueman gnome-keyring gnome-clocks gnome-screenshot
 ```
 
 ## Location

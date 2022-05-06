@@ -57,7 +57,7 @@ exec --no-startup-id picom --config ~/.config/i3/picom/picom.conf -b --experimen
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config mainbar
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config externalbar   # on the second screen to display (if you have got it :)
 exec --no-startup-id nm-applet # NetworkManager
-exec --no-startup-id fcitx5 -d
+exec --no-startup-id fcitx5 -d &
 
 # notification-daemon (dunst)
 exec --no-startup-id dunst -config ~/.config/i3/dunst/dunstrc
@@ -68,7 +68,7 @@ exec --no-startup-id xfce4-power-manager # Could be used to backlight adjust
 
 # set background
 # exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/src/*.jpg
-exec --no-startup-id lua ~/Pictures/wallpapers/autochange.lua &
+exec --no-startup-id lua ~/.config/i3/wallpapers/autochange.lua &
 
 #############
 # Key binding

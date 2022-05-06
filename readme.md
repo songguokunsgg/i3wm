@@ -3,28 +3,28 @@ A **dark** theme about i3wm, include dunst, picom, polybar and rofi.
 
 ## Dependency
 * i3wm (or i3-gaps)
-* qt5ct, qt5-styleplugins (unified appearance between gtk and qt)
-* nm-applet ([NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager))
-* xfce4-power-manager (used to adjust backlight)
+* qt5ct (unified appearance between gtk and qt)
+* networkmanager (manage network)
+* xfce4-power-manager (used to adjust backlight)(or mate-power-manager)
 * dunst (used to system notice)
 * picom (or compton)
 * polybar
 * rofi
-* xfce4-terminal
+* alacritty (terminal)
 * feh (used to set background image)
 * redshift (used to set color temperature)
-* pulseaudio (pavucontrol)
+* pipewire(alsamixer)
 * blueman (blueman-manager)
 * gnome-keyring (password keyring manager, some applications to use it)
+* lua (use as a script language)
 
 ## Other Applications
 * gnome-clocks (clock and timer)
-* gnome-todo   (schedule)
 * gnome-screenshot (screenshot)
 
 ## Install Command
 ```bash
-sudo pacman -S i3 qt5ct networkmanager xfce4-power-manager dunst picom polybar rofi alacritty feh redshift pipewire blueman gnome-keyring gnome-clocks gnome-screenshot
+sudo pacman -S i3 qt5ct networkmanager xfce4-power-manager dunst picom polybar rofi alacritty feh redshift pipewire blueman gnome-keyring gnome-clocks gnome-screenshot lua
 ```
 
 ## Location
@@ -44,7 +44,7 @@ It is basically the same as i3wm normal configure.
 There are some new functional keys in this i3wmconfig:  
 * `mod + c`          open clock application
 * `mod + T`          color temperature adjust  
-* `mod + F1`         open the pulseaudio to control volume
+* `mod + F1`         open the alsa to control volume
 * `mod + F4`         open the bluetooth manager
 * `mod + Shift + T`  cancel color temperature adjust  
 * `mod + Shift + S`  open screenshot application

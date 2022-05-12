@@ -76,7 +76,7 @@ exec --no-startup-id lua ~/.config/i3/wallpapers/autochange.lua &
 
 ## application binding
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id alacritty --config-file="~/.config/i3/alacritty/alacritty.yml"
 
 # start fast menu (a program launcher), use rofi
 bindsym $mod+d exec --no-startup-id rofi -modi "drun" -show drun -config ~/.config/i3/rofi/main_menu.rasi

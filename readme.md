@@ -1,20 +1,19 @@
-# beauty-dark-i3
-A **dark** theme about i3wm, include dunst, picom, polybar and rofi.  
+# sukipai-no-i3
+A theme about i3wm, include dunst, picom, polybar and rofi.  
 
 ## Dependency
 * i3wm (or i3-gaps)
 * qt5ct (unified appearance between gtk and qt)
-* networkmanager (manage network)
-* xfce4-power-manager (used to adjust backlight)(or mate-power-manager)
+* iwd (manage network)
+* mate-power-manager (used to adjust backlight)
 * dunst (used to system notice)
 * picom (or compton)
 * polybar
 * rofi
 * alacritty (terminal)
 * feh (used to set background image)
-* redshift (used to set color temperature)
-* pipewire(alsamixer)
-* blueman (blueman-manager)
+* pipewire (alsamixer)
+* bluedevil(manage bluetooth)
 * gnome-keyring (password keyring manager, some applications to use it)
 * lua (use as a script language)
 
@@ -24,7 +23,7 @@ A **dark** theme about i3wm, include dunst, picom, polybar and rofi.
 
 ## Install Command
 ```bash
-sudo pacman -S i3 qt5ct networkmanager xfce4-power-manager dunst picom polybar rofi alacritty feh redshift pipewire blueman gnome-keyring gnome-clocks gnome-screenshot lua
+sudo pacman -S i3 qt5ct iwd mate-power-manager dunst picom polybar rofi alacritty feh pipewire bluedevil gnome-keyring gnome-clocks gnome-screenshot lua
 ```
 
 ## Location
@@ -50,3 +49,7 @@ There are some new functional keys in this i3wmconfig:
 * `mod + Shift + S`  open screenshot application
 * `mod + o`          run `dunstctl` to close notification windows
 * `mod + Shift + o`  run `dunstctl` to display history notification windows
+* $left j
+* $right l
+* $up i
+* $dowm k

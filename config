@@ -1,14 +1,17 @@
-# i3 config file (v4)
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# i3 配置文件(sukipai)
 
 ####################
-# i3wm basic setting
+#   i3wm  基础设置
 ####################
 
-# Mod
+# 基础按键设置
 set $mod Mod4
+set $left j
+set $right l
+set $up i
+set $down k
 
-# Font for window titles
+# 标题字体
 font pango: Source Code Pro 12
 
 # Title format
@@ -32,7 +35,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-# bindsym Mod4+Shift+e exec "i3-nagbar -t warning -f 'pango: Microsoft YaHei 12' -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+e exec "i3-nagbar -t warning -f 'pango: Microsoft YaHei 12' -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Theme colors
 # gruvbox theme
@@ -50,28 +53,26 @@ client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
 # client.urgent           #2f343a #900000 #ffffff #900000
 
 ###############
-# Basic service
+#   基础服务
 ###############
 
 exec --no-startup-id picom --config ~/.config/i3/picom/picom.conf -b --experimental-backends
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config mainbar
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config externalbar   # on the second screen to display (if you have got it :)
-exec --no-startup-id nm-applet # NetworkManager
+# exec --no-startup-id nm-applet # NetworkManager
 exec --no-startup-id fcitx5 -d &
 
 # notification-daemon (dunst)
 exec --no-startup-id dunst -config ~/.config/i3/dunst/dunstrc
 
 # power manager
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id xfce4-power-manager # Could be used to backlight adjust
+exec --no-startup-id mate-power-manager # Could be used to backlight adjust
 
 # set background
-# exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/src/*.jpg
 exec --no-startup-id lua ~/.config/i3/wallpapers/autochange.lua &
 
 #############
-# Key binding
+#   快捷键
 #############
 
 ## application binding
@@ -83,18 +84,7 @@ bindsym $mod+d exec --no-startup-id rofi -modi "drun" -show drun -config ~/.conf
 bindsym $mod+Tab exec --no-startup-id rofi -modi "window" -show window -config ~/.config/i3/rofi/windows_tasks.rasi
 bindsym $mod+p exec --no-startup-id sh ~/.config/i3/rofi/power_menu.sh
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# redshift adjust
-bindsym $mod+t exec --no-startup-id redshift -O 4300
-bindsym $mod+Shift+t exec --no-startup-id redshift -x
-
-# pulseaudio controller
+# pipewire controller
 bindsym $mod+F1 exec --no-startup-id alsamixer
 
 # bluetooth controller
@@ -118,10 +108,10 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -130,10 +120,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$dowm move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys: bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -257,22 +247,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-#########
-# i3bar
-#########
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
-# # $i3-theme-bar
-# colors {
-# 	background #504945
-# 	statusline #d5c4a1
-# 	separator #3c3836 
-# 	focused_workspace #3c3836 #32302f #fabd2f
-# 	active_workspace #3c3836 #504945 #d5c4a1
-# 	inactive_workspace #3c3836 #504945 #d5c4a1
-# 	urgent_workspace   #7c6f64 #fabd2f #3c3836
-# }

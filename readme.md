@@ -14,8 +14,8 @@ A theme about i3wm, include dunst, picom, polybar and rofi.
 * feh (used to set background image)
 * pipewire (alsamixer)
 * bluedevil(manage bluetooth)
-* gnome-keyring (password keyring manager, some applications to use it)
 * lua (use as a script language)
+* gnome-keyring (manage the keys)
 
 ## Other Applications
 * gnome-clocks (clock and timer)

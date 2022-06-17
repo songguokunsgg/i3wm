@@ -59,7 +59,7 @@ client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
 exec --no-startup-id picom --config ~/.config/i3/picom/picom.conf -b --experimental-backends
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config mainbar
 exec --no-startup-id polybar --config=~/.config/i3/polybar/config externalbar   # on the second screen to display (if you have got it :)
-# exec --no-startup-id nm-applet # NetworkManager
+exec --no-startup-id nm-applet # NetworkManager
 exec --no-startup-id fcitx5 -d &
 
 # notification-daemon (dunst)

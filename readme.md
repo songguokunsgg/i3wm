@@ -16,6 +16,7 @@ A theme about i3wm, include dunst, picom, polybar and rofi.
 * bluedevil(manage bluetooth)
 * lua (use as a script language)
 * gnome-keyring (manage the keys)
+* network-manager network-manager-applet
 
 ## Other Applications
 * gnome-clocks (clock and timer)
@@ -23,7 +24,7 @@ A theme about i3wm, include dunst, picom, polybar and rofi.
 
 ## Install Command
 ```bash
-sudo pacman -S i3 qt5ct iwd mate-power-manager dunst picom polybar rofi alacritty feh pipewire bluedevil gnome-keyring gnome-clocks gnome-screenshot lua
+sudo pacman -S i3 qt5ct iwd mate-power-manager dunst picom polybar rofi alacritty feh pipewire bluedevil gnome-keyring gnome-clocks gnome-screenshot lua network-manager-applet
 ```
 
 ## Location
